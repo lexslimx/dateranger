@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./node_modules/moment/moment.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <h2>My List</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="StartDate" class="control-label col-md-2">StartDate</label>
+                    <div class="col-md-10">
+                        <input type="text" value="1/1/2020" class="form-control" placeholder="Enter start date" id="StartDate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Interval" class="control-label col-md-2">Interval (days):</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control col-md-10" value="5" placeholder="Enter time between meetings in days"
+                            id="Interval">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Count" class="control-label col-md-2">No Of Meetings:</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control col-md-10" value="3" placeholder="Enter number of meetings"
+                            id="Count">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <ul id="meetingsPreviewList">
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        UpdateMeetingsPreview();
+        $("input").change(function () {
+            UpdateMeetingsPreview();
+        });
+    });
+</script>

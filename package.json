@@ -1,0 +1,19 @@
+{
+  "name": "dateranger",
+  "version": "1.0.0",
+  "description": "generate a range of dates at particualr intervals",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dateranger"
+  ],
+  "author": "alex maina",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jQuery": "^1.7.4",
+    "moment": "^2.24.0"
+  }
+}
